@@ -1,18 +1,19 @@
 import React from 'react';
 import {Contexto} from '../contexto/context';
 
-export class Lista extends React.Component {
+export class Carro extends React.Component {
     render() {
         return(
             <Contexto.Consumer>
                 {c => {
-                    return c.listado.map((lista, i) => {
-                        return (
+                    return c.carro.map((itemes, i) => {
+                           return(
                             <div key={i}>
-                                <p onClick={e => c.addItem(i)}>{lista.name}</p>
+                              <li>{itemes}</li>
                             </div>
-                        );
+                           );           
                     })
+                    
                 }}
             </Contexto.Consumer>
         );

@@ -29,11 +29,23 @@ export class AppProvider extends React.Component {
             })
         })
     }
+    
 
+    // filtro aca, consumidor solo muestra
     addItem = (i) => {
-        console.log('click ', i);
+        if(i >= 0) {
+        const newItem = this.state.listado[i].name;
+        console.log('valor', newItem);
+            this.setState({
+                carro: this.state.carro.concat(newItem)
+            })
+        }
+ 
+        // console.log(newItem);
+        // console.log(newItem);
+        // const personName = newItem.name
+        // console.log('name:', personName);
     }
-
 
 
 
